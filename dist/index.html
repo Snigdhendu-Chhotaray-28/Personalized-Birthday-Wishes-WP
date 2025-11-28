@@ -31,7 +31,16 @@
         <p>Enter your name:</p>
         <input type="text" id="sendernameInput" placeholder="e.g., Your name" autocomplete="off">
         <button id="generateLinkBtn">Generate Link</button>
-
+        <div id="linkOutput" class="link-output">
+            <p>Your personalized link:</p>
+            <input type="text" id="generatedLink" readonly>
+            <div class="btn flex ">
+                <button id="copyLinkBtn">Copy Link</button>
+                <button id="whatsappShareBtn" class="whatsapp-btn">
+                    WhatsApp
+                </button>
+            </div>
+        </div>
 
     </div>
 
