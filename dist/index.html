@@ -24,7 +24,16 @@
 <!-- npx @tailwindcss/cli -i ./src/input.css -o ./dist/style.css --watch -->
 
 <body>
-    
+    <div class="container pt-7">
+        <h1>Create a Personalized Birthday Wish Link!</h1>
+        <p>Enter the name of the birthday person:</p>
+        <input type="text" id="nameInput" placeholder="e.g., Friend's name" autocomplete="off">
+        <p>Enter your name:</p>
+        <input type="text" id="sendernameInput" placeholder="e.g., Your name" autocomplete="off">
+        <button id="generateLinkBtn">Generate Link</button>
+
+
+    </div>
 
     <script src="script.js"></script>
 </body>
