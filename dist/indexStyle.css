@@ -21,3 +21,13 @@ body {
     width: 90%;
 }
 
+h1 {
+    color: #e91e63; /* Pinkish-red */
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
