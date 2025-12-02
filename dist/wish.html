@@ -23,7 +23,53 @@
 
     </head>
 
-    
+    <!-- npx @tailwindcss/cli -i ./src/input.css -o ./dist/style.css --watch -->
+
+    <body class ="min-h-screen overflow-x-hidden relative">
+
+        <!-- Loading Screen -->
+        <!-- <div id="loading-screen" class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-white z-[9999]">
+            <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-pink-500 border-solid"></div>
+        </div> -->
+        
+        <div id="flower-container" class="flower-container"></div>
+        <div id="confetti-container"></div>
+        
+        <header class="py-6 px-4 text-center relative z-10 flex flex-col items-center">
+            <h1 class="text-4xl md:text-6xl font-bold bg-clip-text text-pink-500 bg-gradient-to-r mb-4 pulse-animation z-50">🎉 Happy Birthday, <span id="recipientName"></span>! 🎉</h1>
+            <p id="wishMessage">
+            <p class="text-lg text-purple-800">Someone special is celebrating today!</p>
+            <div class="text-pink-800">
+                From <span id="signature">Your Name/Friend</span>
+            </div>
+
+            <!-- <script>
+                const audio = document.getElementById('myAudio');
+                audio.autoplay = true;
+                audio.loop = true;
+                audio.load(); // Needed to apply autoplay after setting
+                audio.muted = false;
+            </script> -->
+
+            <!-- <script
+                src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                type="module"
+                ></script>
+
+                <dotlottie-player
+                src="https://lottie.host/cb126d18-4f9a-4d08-a103-5a2b03718e2f/jTUR26HuXb.lottie"
+                background="transparent"
+                speed="1"
+                style="width: 300px; height: 300px"
+                loop
+                autoplay
+                ></dotlottie-player> -->
+
+            
+                
+        </header>
+        
+
         
         <script src="script.js"></script>
     </body>
