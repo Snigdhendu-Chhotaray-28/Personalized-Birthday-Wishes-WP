@@ -65,3 +65,22 @@
     100% { transform: translateY(0px); }
 }
 
+@keyframes confetti {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); 
+      color: rgb(255, 91, 230);
+    }
+    50% { transform: scale(1.1); 
+          text-shadow: #000;
+          color: rgb(255, 91, 230);
+
+          /* linear-gradient(90deg,rgba(252, 83, 196, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%) */
+
+          -webkit-text-stroke: 0.5px rgb(255, 74, 228);
+    }
+}
+
