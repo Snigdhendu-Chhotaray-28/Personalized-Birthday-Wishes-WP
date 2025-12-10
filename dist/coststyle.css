@@ -126,3 +126,45 @@ dotlottie-player.gift-box {
     }
 } */
 
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.gift-box{
+  transform: rotate(0deg);
+  animation: dropdown 7s linear 1s;
+}
+
+body{
+  background: linear-gradient(to bottom right, oklch(97% 0.02 338.4), oklch(94.6% 0.033 307.174));
+}
+
+.body{
+  background-color: #ba0000;
+}
+
+.hide{
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+.visible{
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+.pulse-animation {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    opacity: 0;
+}
