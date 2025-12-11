@@ -371,3 +371,33 @@ div.flower6 {
     position: relative;
 } */
 
+.candle-flame {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    background: linear-gradient(to bottom, #ff7800, #ffd900);
+    border-radius: 50% 50% 20% 20%;
+    box-shadow: 0 0 10px #ff7800, 0 0 20px #ffd900;
+    animation: flicker 0.5s infinite alternate;
+}
+
+.cake-layer {
+    position: relative;
+    background: linear-gradient(to bottom, #f9c5d1, #fce4ec);
+    border-radius: 10px;
+}
+
+.frosting {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.message-card {
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.message-card:hover {
+    transform: rotateY(10deg) rotateX(5deg);
+}
