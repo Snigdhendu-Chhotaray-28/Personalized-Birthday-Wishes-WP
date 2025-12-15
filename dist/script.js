@@ -38,6 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+                // NEW: Enable WhatsApp button and set its click handler
+                whatsappShareBtn.style.display =  'inline-block'; // Show it
+                whatsappShareBtn.onclick = () => {
+                    const message = `🎉 Happy Birthday! Click this link for a special wish: ${wishLink}`;
+                    const encodedMessage = encodeURIComponent(message);
+                    // For web browsers (opens web.whatsapp.com)
+                    const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
+                    // For mobile devices (opens WhatsApp app directly) - can also be used for web
+                    // const whatsappUrl = `whatsapp://send?text=${encodedMessage}`;
+
+                    window.open(whatsappUrl, '_blank');
+                };
             } else {
                 alert('Please enter both names!'); // More specific alert
                 linkOutput.style.display = 'none'; // Hide if no name entered
