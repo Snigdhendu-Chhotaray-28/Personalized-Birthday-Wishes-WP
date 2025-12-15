@@ -1,0 +1,59 @@
+ 
+document.addEventListener('DOMContentLoaded', () => {
+    const nameInput = document.getElementById('nameInput');
+    const sendernameInput = document.getElementById('sendernameInput');
+    const generateLinkBtn = document.getElementById('generateLinkBtn');
+    const linkOutput = document.getElementById('linkOutput');
+    const generatedLinkInput = document.getElementById('generatedLink');
+    const copyLinkBtn = document.getElementById('copyLinkBtn');
+
+
+
+
+
+
+
+    // ============== Generate link with receving names ============== //
+
+    if (generateLinkBtn) { // Check if we are on the link generation page
+        generateLinkBtn.addEventListener('click', () => {
+            const name = nameInput.value.trim();
+            const yourName = sendernameInput.value.trim(); // Changed to 'const' for clarity
+            if (name && yourName) {
+                // console.log(window.location.hostname);
+                // Get the base URL of your website
+
+                // const baseUrl = window.location.origin + window.location.pathname.replace('index.html', 'wish.html');
+                const baseUrl = window.location.origin + '/wish.html';
+                console.log(window.location);
+                
+                // Encode the name to handle spaces and special characters
+                const encodedName = encodeURIComponent(name);
+                const encodedSenderName = encodeURIComponent(yourName); // Encode senderName as well
+                // Corrected: Use '&' to separate multiple query parameters
+                const wishLink = `${baseUrl}?name=${encodedName}&senderName=${encodedSenderName}`;
+
+                generatedLinkInput.value = wishLink;
+                linkOutput.style.display = 'block'; // Show the link output section
+
+
+
+            } else {
+                alert('Please enter both names!'); // More specific alert
+                linkOutput.style.display = 'none'; // Hide if no name entered
+            }
+        });
+
+    }
+
+
+
+
+
+});
+
+
+
+
+
+
