@@ -56,6 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        copyLinkBtn.addEventListener('click', () => {
+            generatedLinkInput.select();
+            generatedLinkInput.setSelectionRange(0, 99999); // For mobile devices
+            document.execCommand('copy');
+            alert('Link copied to clipboard!');
+        });
     }
 
 
