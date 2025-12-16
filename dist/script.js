@@ -102,3 +102,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
+
+// =================== box dispior and page appear =================== //
+
+let determine = 0;
+
+(()=>{
+
+    setTimeout(()=>{
+        document.querySelector('.gift-box').classList.add('hide');
+        document.querySelector('.gift-box').classList.remove('visible');
+        document.querySelector('main').classList.remove('hide');
+        document.querySelector('main').classList.add('visible');
+    },7000);
+})();
+(()=>{
+
+    setTimeout(()=>{
+        document.querySelector('main').classList.remove('hide');
+        document.querySelector('main').classList.add('visible');
+        windBlow();
+    },8000);
+})();
+
+// Countdown Timer
+// function updateCountdown() {
+//     const now = new Date();
+//     const endOfDay = new Date();
+//     endOfDay.setHours(23, 59, 59, 999);
+
+//     const diff = endOfDay - now;
+
+//     const hours = Math.floor(diff / (1000 * 60 * 60));
+//     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+//     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+//     document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+//     document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+//     document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+// }
+
+// setInterval(updateCountdown, 1000);
+// updateCountdown();
+
+
+
