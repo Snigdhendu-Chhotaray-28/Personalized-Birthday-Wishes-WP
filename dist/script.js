@@ -68,6 +68,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+    // ==================== diplay name as per link ==================== // 
+
+    // --- For the wish display page (wish.html) ---
+    const wishMessage = document.getElementById('wishMessage');
+    const recipientNameSpan = document.getElementById('recipientName');
+    const signature = document.getElementById('signature');
+
+    if (wishMessage && recipientNameSpan) { // Check if we are on the wish display page
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        const senderName = urlParams.get('senderName'); // Correctly retrieve senderName
+
+        if (name) { // Check if name exists
+            recipientNameSpan.textContent = decodeURIComponent(name);
+            document.querySelector('.frd_name').innerHTML = decodeURIComponent(name);
+            if (senderName) { // Check if senderName exists
+                signature.textContent = decodeURIComponent(senderName); // Corrected typo here
+            } else {
+                signature.textContent = 'A Secret Admirer'; // Fallback for sender if not provided
+            }
+        }
+    }
 });
 
 
