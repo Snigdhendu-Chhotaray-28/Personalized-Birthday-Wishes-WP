@@ -88,6 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 signature.textContent = 'A Secret Admirer'; // Fallback for sender if not provided
             }
+        } else {
+            // Fallback if no name is provided in the URL
+            recipientNameSpan.textContent = 'Dear Friend';
+            wishMessage.innerHTML = `Happy Birthday! We hope you have a fantastic day filled with joy and laughter.`;
+            signature.textContent = 'Someone Special'; // Fallback for sender if no name
         }
     }
 });
