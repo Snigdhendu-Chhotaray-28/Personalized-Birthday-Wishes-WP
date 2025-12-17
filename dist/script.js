@@ -181,5 +181,23 @@ function createConfetti() {
 
 
 
+// =================== Blow Candles Button =================== //
+
+document.getElementById('wish-btn').addEventListener('click', function() {
+    // Animate candles
+    if(determine == 0){
+        determine = 1;
+        // Animate candles
+        const flames = document.querySelectorAll('.candle-flame');
+        flames.forEach(flame => {
+            flame.style.animation = 'none';
+            flame.style.opacity = '0';
+            flame.style.transform = 'scale(0)';
+        });
+        document.querySelector('.myAudio').play();
+        createConfetti();
+    }
+});
+
 
 
