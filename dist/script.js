@@ -201,3 +201,41 @@ document.getElementById('wish-btn').addEventListener('click', function() {
 
 
 
+
+
+// =================== Bottom balloons animation =================== //
+
+function createBalloons() {
+    const balloonContainer = document.createElement('div');
+    balloonContainer.className = 'fixed top-0 left-0 w-full h-full pointer-events-none z-0';
+    document.body.appendChild(balloonContainer);
+
+    const balloonColors = ['#ff3366', '#ff6633', '#ffcc33', '#33ccff', '#9933ff', '#33ff66'];
+
+    for (let i = 0; i < 15; i++) {
+        const balloon = document.createElement('div');
+        balloon.className = 'absolute rounded-full';
+        balloon.style.width = Math.random() * 60 + 30 + 'px';
+        balloon.style.height = Math.random() * 80 + 50 + 'px';
+        balloon.style.left = Math.random() * 100 + '%';
+        balloon.style.bottom = '-100px';
+        balloon.style.backgroundColor = balloonColors[Math.floor(Math.random() * balloonColors.length)];
+        balloon.style.opacity = '0.7'; 
+        balloon.style.animation = `float ${Math.random() * 10 + 10}s linear infinite`;
+        balloon.style.animationDelay = Math.random() * 5 + 's';
+
+        // Balloon string
+        const string = document.createElement('div');
+        string.className = 'absolute bg-gray-400';
+        string.style.width = '2px';
+        string.style.height = Math.random() * 50 + 30 + 'px';
+        string.style.bottom = '-30px';
+        string.style.left = '50%';
+        string.style.transform = 'translateX(-50%)';
+
+        balloon.appendChild(string);
+        balloonContainer.appendChild(balloon);
+    }
+}
+
+
