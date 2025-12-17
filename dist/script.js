@@ -149,3 +149,37 @@ let determine = 0;
 
 
 
+
+
+// =================== Falling small ribbon animation =================== //
+
+function createConfetti() {
+    const colors = ['#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5', '#2196f3', '#03a9f4', '#00bcd4', '#009688', '#4CAF50', '#8BC34A', '#CDDC39', '#FFEB3B', '#FFC107', '#FF9800', '#FF5722'];
+
+    for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * window.innerWidth + 'px';
+        confetti.style.top = -10 + 'px';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.width = Math.random() * 10 + 5 + 'px';
+        confetti.style.height = Math.random() * 10 + 5 + 'px';
+        confetti.style.animation = `confetti ${Math.random() * 3 + 2}s linear forwards`;
+        confetti.style.animationDelay = Math.random() * 0.5 + 's';
+
+        document.getElementById('confetti-container').appendChild(confetti);
+
+        // Remove confetti after animation completes
+        setTimeout(() => {
+            confetti.remove();
+        }, 5000);
+    }
+    document.querySelector('.blowWind').classList.add('hide');
+}
+
+
+
+
+
+
+
