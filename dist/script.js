@@ -259,6 +259,14 @@ function createFlowers() {
     }
 }
 
+// Initialize animations
+window.addEventListener('DOMContentLoaded', () => {
+    createBalloons();
+    createFlowers();
+});
+
+
+
 
 
 
