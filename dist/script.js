@@ -239,3 +239,33 @@ function createBalloons() {
 }
 
 
+
+
+
+// =================== Flower Animation in home page =================== //
+
+function createFlowers() {
+    const flowerContainer = document.getElementById('flower-container');
+    const flowerColors = ['#FF69B4', '#FF1493', '#FF00FF', '#EE82EE', '#DA70D6']; // Various shades of pink/purple
+
+    for (let i = 0; i < 20; i++) { // Create 20 flowers
+        const flower = document.createElement('div');
+        flower.className = 'flower';
+        flower.style.left = Math.random() * 100 + '%';
+        flower.style.top = Math.random() * 20 + '%'; // Bloom in the top 20% of the screen
+        flower.style.backgroundColor = flowerColors[Math.floor(Math.random() * flowerColors.length)];
+        flower.style.animationDelay = Math.random() * 3 + 's'; // Stagger the animation
+        flowerContainer.appendChild(flower);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
