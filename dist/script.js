@@ -270,6 +270,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
+// =================== Bottom 4 img height and width adjustement for different device(always width == height) =================== //
+
+function restich_height(){
+    const width = document.querySelector('.restict').offsetWidth;
+    const resticts = document.querySelectorAll('.restict');
+    resticts.forEach((restict) => {
+        restict.style.height = width+'px';
+    });
+}
+restich_height();
+
+
+
 
 
 
