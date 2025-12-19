@@ -290,3 +290,38 @@ restich_height();
 
 
 
+
+// =================== Audio play =================== //
+
+let audioContext;
+let analyser;
+let mediaStreamSource;
+
+
+
+
+
+// =================== Check wind blow =================== //
+
+function windBlow(){
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .then(stream => {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                mediaStreamSource = audioContext.createMediaStreamSource(stream);
+                analyser = audioContext.createAnalyser();
+                analyser.fftSize = 2048; // Fast Fourier Transform size
+                mediaStreamSource.connect(analyser);
+
+                detectWind();
+            })
+            .catch(err => {
+                console.error('Error accessing microphone:', err);
+            });
+        } else {
+            console.error('getUserMedia not supported in this browser.');
+        }
+}
+
+
+
