@@ -348,7 +348,26 @@ function detectWind() {
         // Define a threshold for "wind"
         const windThreshold = 0.2; // You'll need to adjust this value!
 
-        
+        if (averageAmplitude > windThreshold) {
+            // --- YOUR TASK GOES HERE ---
+            // Example: Change background color, play a sound, show an image
+            document.body.style.backgroundColor = `hsl(${Math.random() * 360}, 70%, 80%)`;
+
+            if(determine == 0){
+                determine = 1;
+                // Animate candles
+                const flames = document.querySelectorAll('.candle-flame');
+                flames.forEach(flame => {
+                    flame.style.animation = 'none';
+                    flame.style.opacity = '0';
+                    flame.style.transform = 'scale(0)';
+                });
+                document.querySelector('.myAudio').play();
+                createConfetti();
+            }
+        } else {
+            document.body.style.backgroundColor = ''; // Reset background
+        }
 
         requestAnimationFrame(checkAudio);
     };
