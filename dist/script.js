@@ -325,3 +325,32 @@ function windBlow(){
 
 
 
+
+
+
+
+
+function detectWind() {
+    const bufferLength = analyser.fftSize;
+    const dataArray = new Uint8Array(bufferLength);
+
+    const checkAudio = () => {
+        analyser.getByteTimeDomainData(dataArray); // Get waveform data
+
+        // Calculate the average amplitude
+        let sum = 0;
+        for (let i = 0; i < bufferLength; i++) {
+            const value = (dataArray[i] - 128) / 128.0; // Normalize to -1 to 1
+            sum += Math.abs(value); // Absolute value for amplitude
+        }
+        const averageAmplitude = sum / bufferLength;
+
+        // Define a threshold for "wind"
+        const windThreshold = 0.2; // You'll need to adjust this value!
+
+        
+
+        requestAnimationFrame(checkAudio);
+    };
+    checkAudio();
+}
