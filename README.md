@@ -57,7 +57,6 @@ Snigdhendu Chhotaray
 https://snigdhendu-developer-portfolio.netlify.app/
 
 🔗 Live Preview
+<img src="https://github.com/Snigdhendu-Chhotaray-28/Personalized-Birthday-Wishes-WP/blob/main/dist/img/image.png?raw=true" alt="">
 
-<img scr="https://github.com/Snigdhendu-Chhotaray-28/Personalized-Birthday-Wishes-WP/blob/main/dist/img/image.png?raw=true">
-
-<img scr="https://github.com/Snigdhendu-Chhotaray-28/Personalized-Birthday-Wishes-WP/blob/main/dist/img/image%20copy.png?raw=true">
+<img src="https://github.com/Snigdhendu-Chhotaray-28/Personalized-Birthday-Wishes-WP/blob/main/dist/img/image%20copy.png?raw=true" alt="">
